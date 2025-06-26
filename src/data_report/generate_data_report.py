@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 import os, sys
-from src.exception import CustomException
+from src.exception import customException
 
 
 class DashboardGenerator:

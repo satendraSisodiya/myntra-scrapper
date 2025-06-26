@@ -1,11 +1,11 @@
 import pandas as pd
 import streamlit as st 
-from src.cloud_io import MongoIO
+from src.cloud_io import MongoIo
 from src.constants import SESSION_PRODUCT_KEY
 from src.utils import fetch_product_names_from_cloud
 from src.data_report.generate_data_report import DashboardGenerator
 
-mongo_con = MongoIO()
+mongo_con = MongoIo()
 
 
 def create_analysis_page(review_data: pd.DataFrame):

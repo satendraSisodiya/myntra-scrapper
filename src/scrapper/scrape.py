@@ -1,7 +1,7 @@
 from flask import request
 from selenium import webdriver 
 from selenium.webdriver.common.by import By 
-from src.exception import CustomException
+from src.exception import customException
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import os, sys
@@ -50,7 +50,7 @@ class ScrapeReviews:
             return product_urls
 
         except Exception as e:
-            raise CustomException(e, sys)
+            raise customException(e, sys)
 
     def extract_reviews(self, product_link):
         try:
@@ -78,7 +78,7 @@ class ScrapeReviews:
                 return None
             return product_reviews
         except Exception as e:
-            raise CustomException(e, sys)
+            raise customException(e, sys)
         
     def scroll_to_load_reviews(self):
         # Change the window size to load more data
@@ -180,7 +180,7 @@ class ScrapeReviews:
             return review_data
 
         except Exception as e:
-            raise CustomException(e, sys)
+            raise customException(e, sys)
         
     
     def skip_products(self, search_string, no_of_products, skip_index):
@@ -233,4 +233,4 @@ class ScrapeReviews:
     
 
         except Exception as e:
-            raise CustomException(e, sys)
+            raise customException(e, sys)
